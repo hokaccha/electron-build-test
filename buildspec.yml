@@ -1,0 +1,13 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - apt-get update -y
+      - apt-get install -y jq
+      - npm install
+  build:
+    commands:
+      - /bin/sh ./build.sh
+  post_build:
+    commands:
+      - /bin/sh ./release.sh

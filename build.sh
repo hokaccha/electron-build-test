@@ -10,4 +10,9 @@ rm -rf $OUT_DIR
 --platform=darwin \
 --arch=x64 \
 --overwrite \
+--app-version=$BUILD_VERSION \
+--build-version=$BUILD_VERSION \
 --out=$OUT_DIR
+
+cd dist
+zip -qry Test-$BUILD_VERSION-darwin-x64.zip Test-darwin-x64
